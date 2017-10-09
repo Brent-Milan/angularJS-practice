@@ -1,21 +1,26 @@
 <!DOCTYPE html>
-<html ng-app>
+<html data-ng-app>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 <head>
 
 <title>Insert title here</title>
 </head>
 <body data-ng-init="names = { 'Oprah', 'JFK', 'John Quincy Adams', 'Frederick Douglas' }" >
 	<div class="container">
-		Name:  
+		Name:
 		<br />
-		<input type="text" ng-model = "name"  /> {{ name }}
+		<input type="text" data-ng-model = "userInput"  />
 		<br />
+		<p>{{userInput}}</p>
+	</div>
+	<div class="list">
 		<ul>
-			<li ng-repeat = "name in names"> {{ name }}</li>
+			<li data-ng-repeat = "name in names">{{ name }}</li>
 		</ul>
-		
 	</div>
 
-	<script src="Scripts/angular.min.js"></script>
+	</div>
+
+
 </body>
 </html>
